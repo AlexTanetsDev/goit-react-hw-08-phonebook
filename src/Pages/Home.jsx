@@ -1,7 +1,9 @@
+import { GreetingBox } from "components/GreetingBox/GreetingBox";
+
 export default function Home() {
     
     return (
-        <div><p>Home Page</p></div>
+       <GreetingBox/>
     );
     
 };
