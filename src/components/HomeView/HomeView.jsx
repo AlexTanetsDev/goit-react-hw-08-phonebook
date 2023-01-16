@@ -1,26 +1,34 @@
 import {
-  GreetingBtnBox,
   GreetingTag,
   GreetingTitle,
   GreetingWraper,
-  TitleBox,
 } from 'components/GreetingBox/GreetingBox.styled';
-import { AddContactBtn, ContactsInfo } from './HomeView.styled';
+import { useSelector } from 'react-redux';
+import { selectContacts } from 'Redux/contacts/selectors';
+import { AddContactBox, AddContactBtn, ContactInfoWrapper, ContactsInfo, HomeViewTitleBox } from './HomeView.styled';
+import { FaUserAlt } from "react-icons/fa";
 
 export const HomeView = () => {
+  const contacts = useSelector(selectContacts);
+  const contactsCount = contacts.length;
+
   return (
     <GreetingWraper>
-      <TitleBox>
+      <HomeViewTitleBox>
         <GreetingTitle>Phonebook</GreetingTitle>
         <GreetingTag>
           All your contacts in one app <br /> on any device!
         </GreetingTag>
-      </TitleBox>
+      </HomeViewTitleBox>
 
-      <GreetingBtnBox>
-        <ContactsInfo>Tou have ... contacts on your Phonebook</ContactsInfo>
+      <AddContactBox>
+        <ContactInfoWrapper>
+          <FaUserAlt color="#000000b9" size={50} />
+          <ContactsInfo>Tou have {contactsCount} contacts <br/>in your Phonebook</ContactsInfo>
+        </ContactInfoWrapper>
+        
         <AddContactBtn type="button">Add contact</AddContactBtn>
-      </GreetingBtnBox>
+      </AddContactBox>
     </GreetingWraper>
   );
 };

@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export const GreetingWraper = styled.div`
     max-width: 500px;
-    height: 350px;
+    min-height: 350px;
     background-color: #e0e0e0;
 
-    margin: 15px auto;
+    margin: 35px auto;
     padding: 30px 15px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -48,6 +48,7 @@ export const GreetingTag = styled.p`
 export const GreetingBtnBox = styled.div`
 display: flex;
 flex-direction: column;
+align-items:center;
 gap: 15px;
 
 `
