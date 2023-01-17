@@ -1,4 +1,5 @@
 import { Formik, ErrorMessage } from 'formik';
+import PropTypes from 'prop-types';
 import {
   ContactsForm,
   FormLabel,
@@ -19,12 +20,13 @@ const initialValues = {
   number: '',
 };
 
-export const ContactForm = () => {
+export const ContactForm = ({ modalClose } ) => {
   const dispatch = useDispatch();
 
   const hendleSubmit = (values, { resetForm }) => {
     dispatch(addContact(values));
     resetForm();
+    modalClose();
   };
   return (
     <Formik
@@ -49,3 +51,8 @@ export const ContactForm = () => {
     </Formik>
   );
 };
+
+
+ContactForm.propTypes = {
+  modalClose: PropTypes.func.isRequired
+}

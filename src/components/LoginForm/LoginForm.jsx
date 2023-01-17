@@ -1,5 +1,8 @@
+import { FormLabel, SubmitButton } from 'components/ContactForm/ContactForm.styled';
+import { StyledInput } from 'components/Filter/Filter.styled';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../Redux/auth/operations';
+import { StyledLoginForm } from './LoginForm.styled';
 
 
 export const LoginForm = () => {
@@ -18,16 +21,16 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label >
+    <StyledLoginForm onSubmit={handleSubmit} autoComplete="off">
+      <FormLabel >
         Email
-        <input type="email" name="email" />
-      </label>
-      <label >
+        <StyledInput type="email" name="email" placeholder='example@mail.com'/>
+      </FormLabel>
+      <FormLabel >
         Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+        <StyledInput type="password" name="password" placeholder='example123'/>
+      </FormLabel>
+      <SubmitButton type="submit">Log In</SubmitButton>
+    </StyledLoginForm>
   );
 };

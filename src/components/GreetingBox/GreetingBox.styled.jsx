@@ -8,8 +8,7 @@ export const GreetingWraper = styled.div`
   min-height: 350px;
   background-color: #e0e0e0;
 
-  margin: 35px auto;
-  margin-top: 75px;
+  margin: 0 auto;
   padding: 30px 15px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

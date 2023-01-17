@@ -1,3 +1,4 @@
+import { GreetingWraper } from "components/GreetingBox/GreetingBox.styled";
 import { LoginForm } from "components/LoginForm/LoginForm";
 
 
@@ -5,6 +6,9 @@ import { LoginForm } from "components/LoginForm/LoginForm";
 export default function Login() {
     
     return (
-        <LoginForm/>
+        <GreetingWraper>
+            <LoginForm />
+        </GreetingWraper>
+        
     );
 };

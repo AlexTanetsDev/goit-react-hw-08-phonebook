@@ -14,6 +14,7 @@ import {
   FaUserAlt,
 } from 'react-icons/fa';
 import { BsXLg } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -43,7 +44,7 @@ export const Modal = ({ modalClose }) => {
         <ModalCloseBtn type="button" onClick={modalClose}>
           <BsXLg size={30} />
         </ModalCloseBtn>
-        <ContactForm />
+        <ContactForm modalClose={ modalClose } />
         <IconBox>
           <FaEnvelope color="#000000b9" size={25} />
           <FaCommentDots color="#000000b9" size={25} />
@@ -56,3 +57,8 @@ export const Modal = ({ modalClose }) => {
     modalRoot
   );
 };
+
+Modal.propTypes = {
+  modalClose: PropTypes.func.isRequired
+
+}

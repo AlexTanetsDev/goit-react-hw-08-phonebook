@@ -24,11 +24,15 @@ export const FormLabel = styled.label`
 `;
 
 export const StyledField = styled(Field)`
-border: 1.5px solid black;
 border-radius: 15px;
 outline: none;
 padding: 2px 10px;
-
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #e0e0e0;
+  :hover,:focus{
+    outline: 2px solid #60b8ff;
+  }
 
 `
 export const SubmitButton= styled.button`
