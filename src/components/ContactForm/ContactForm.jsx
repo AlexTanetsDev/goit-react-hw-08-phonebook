@@ -1,5 +1,5 @@
-import { Formik, Field, ErrorMessage } from "formik"
-import { ContactsForm, FormLabel } from "./ContactForm.styled";
+import { Formik, ErrorMessage } from "formik"
+import { ContactsForm, FormLabel, StyledField, SubmitButton } from "./ContactForm.styled";
 import * as yup from 'yup';
 import { useDispatch } from "react-redux";
 import { addContact } from "Redux/contacts/operations";
@@ -30,15 +30,15 @@ export const ContactForm = () => {
         <Formik initialValues={initialValues} validationSchema={schema} onSubmit={hendleSubmit}>
             <ContactsForm autoComplete="off">
                 <FormLabel htmlFor="name">Name
-                    <Field type="text" name="name" />
+                    <StyledField type="text" name="name" />
                     <ErrorMessage name="name" component="div" />
                 </FormLabel>
                 
                 <FormLabel htmlFor="number">Number
-                    <Field type="tel" name="number"/>
+                    <StyledField type="tel" name="number"/>
                     <ErrorMessage name="number" component="div" />
                 </FormLabel>
-                <button type="submit">Add contact</button>
+                <SubmitButton type="submit">Add contact</SubmitButton>
             </ContactsForm>
         </Formik>
     )

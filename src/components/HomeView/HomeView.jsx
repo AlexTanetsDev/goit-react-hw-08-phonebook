@@ -7,10 +7,17 @@ import { useSelector } from 'react-redux';
 import { selectContacts } from 'Redux/contacts/selectors';
 import { AddContactBox, AddContactBtn, ContactInfoWrapper, ContactsInfo, HomeViewTitleBox } from './HomeView.styled';
 import { FaUserAlt } from "react-icons/fa";
+import { useState } from 'react';
+import { Modal } from 'components/Modal/Modal';
 
 export const HomeView = () => {
   const contacts = useSelector(selectContacts);
   const contactsCount = contacts.length;
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+const toggleModal=()=>{
+  setIsModalOpen(!isModalOpen);
+}
 
   return (
     <GreetingWraper>
@@ -27,8 +34,9 @@ export const HomeView = () => {
           <ContactsInfo>Tou have {contactsCount} contacts <br/>in your Phonebook</ContactsInfo>
         </ContactInfoWrapper>
         
-        <AddContactBtn type="button">Add contact</AddContactBtn>
+        <AddContactBtn type="button" onClick={toggleModal}>Add contact</AddContactBtn>
       </AddContactBox>
+      {isModalOpen && <Modal modalClose={toggleModal}/>}
     </GreetingWraper>
   );
 };
