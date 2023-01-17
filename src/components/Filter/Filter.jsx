@@ -1,25 +1,28 @@
-import { FormLabel } from "components/ContactForm/ContactForm.styled"
-import { useDispatch } from "react-redux";
-import { setFilter } from "Redux/filterSlice";
-import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'Redux/filterSlice';
+import { useState } from 'react';
+import { FilterLabel, StyledInput } from './Filter.styled';
 
 export const Filter = () => {
+  const dispatch = useDispatch();
+  const [filterValue, setFilterValue] = useState('');
 
-    const dispatch = useDispatch();
-    const [filterValue, setFilterValue] = useState("");
-     
-    const handleFilterChange = e => {
-        const value = e.target.value;
-        setFilterValue(value);
+  const handleFilterChange = e => {
+    const value = e.target.value;
+    setFilterValue(value);
 
-        dispatch(setFilter(value));
-}
-    
+    dispatch(setFilter(value));
+  };
 
-    return (
-        <FormLabel>Find contacts by name
-            <input type="text" value={filterValue}  onChange={ handleFilterChange } />
-        </FormLabel>
-    )
-}
-
+  return (
+    <FilterLabel>
+      Find contacts by name
+      <StyledInput
+        type="text"
+        value={filterValue}
+        onChange={handleFilterChange}
+        placeholder="Contact Name"
+      />
+    </FilterLabel>
+  );
+};
