@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  min-width: 400px;
+  width: 300px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   background-color: #fff;
   border-radius: 15px;
+
+     @media screen and (min-width: 450px) {
+   min-width: 400px;
+}
 `;
 
 export const ContactItem = styled.li`
@@ -24,8 +28,14 @@ export const ContactItem = styled.li`
 `;
 
 export const Contact = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
+
+
+     @media screen and (min-width: 450px) {
+     font-size: 24px;
+  font-weight: 500;
+  }
 `;
 
 export const DeleteContactBtn = styled.button`

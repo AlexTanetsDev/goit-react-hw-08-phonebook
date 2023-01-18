@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Field, Form} from "formik"
 
 export const ContactsForm = styled(Form)`
-
 display: flex;
 flex-direction: column;
 background-color: #fff;
@@ -24,6 +23,8 @@ export const FormLabel = styled.label`
 `;
 
 export const StyledField = styled(Field)`
+
+
 border-radius: 15px;
 outline: none;
 padding: 2px 10px;
@@ -33,6 +34,10 @@ padding: 2px 10px;
   :hover,:focus{
     outline: 2px solid #60b8ff;
   }
+
+     @media screen and (max-width: 450px) {
+  max-width: 250px;
+}
 
 `
 export const SubmitButton= styled.button`

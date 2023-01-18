@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const GreetingWraper = styled.div`
   position: relative;
 
-  max-width: 300px;
+  max-width: 350px;
   min-height: 300px;
   background-color: #e0e0e0;
 
@@ -16,6 +16,7 @@ export const GreetingWraper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 
    @media screen and (min-width: 450px) {
