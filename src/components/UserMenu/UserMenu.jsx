@@ -5,7 +5,7 @@ import { StyledLogoutBtn, UserName, UserWraper } from "./UserMenu.styled";
 import { FaUserCircle } from "react-icons/fa";
 
 export const UserMenu = () => {
-    const {email} = useSelector(selectUser);
+    const {name} = useSelector(selectUser);
    const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -13,8 +13,8 @@ export const UserMenu = () => {
     }
     return (
         <UserWraper>
-            <FaUserCircle size={25} color={ '#fff'} />
-            <UserName>{ email }</UserName>
+            
+            <UserName> <FaUserCircle size={25} color={ '#fff'} />{ name }</UserName>
             <StyledLogoutBtn onClick={handleClick}>Logout</StyledLogoutBtn>
         </UserWraper>
     );

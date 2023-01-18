@@ -7,9 +7,14 @@ export const StyledInput = styled.input`
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+  width:250px;
     :hover,:focus{
     outline: 2px solid #60b8ff;
   }
+
+     @media screen and (min-width: 450px) {
+  width:350px;
+}
 `;
 
 export const FilterLabel = styled.label`
@@ -20,4 +25,6 @@ export const FilterLabel = styled.label`
 
   font-size: 24px;
   font-weight: 500;
+
+ 
 `;

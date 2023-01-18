@@ -4,19 +4,27 @@ import styled from 'styled-components';
 export const GreetingWraper = styled.div`
   position: relative;
 
-  max-width: 500px;
-  min-height: 350px;
+  max-width: 300px;
+  min-height: 300px;
   background-color: #e0e0e0;
 
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 10px 10px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
+
+   @media screen and (min-width: 450px) {
+   max-width: 500px;
+   min-height: 350px;
+
+   padding: 30px 15px;
+     gap: 10px;
+}
 `;
 
 export const TitleBox = styled.div`

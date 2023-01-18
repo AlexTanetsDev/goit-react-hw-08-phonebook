@@ -18,5 +18,9 @@ export const Layout = () => {
 };
 
 const Container= styled.div`
-    padding: 75px 15px 20px 15px;
+    padding: 85px 10px 10px 10px;
+
+            @media screen and (min-width: 450px) {
+     padding: 75px 15px 20px 15px;
+}
 `
