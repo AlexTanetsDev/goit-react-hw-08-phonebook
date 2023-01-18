@@ -33,6 +33,7 @@ export const TitleBox = styled.div`
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  justify-content: center;
 
   background-color: #fff;
   padding: 15px;
@@ -42,6 +43,7 @@ export const TitleBox = styled.div`
 
 export const GreetingTitle = styled.h2`
   font-size: 32px;
+  text-align: center;
 `;
 
 export const GreetingTag = styled.p`
